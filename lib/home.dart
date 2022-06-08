@@ -9,26 +9,28 @@ class TabBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: const [
-          Text('All',
-              style: TextStyle(
-                fontSize: 21,
-                color: Colors.white,
-              )),
-          IconButton(
-              onPressed: null,
-              icon: Icon(Icons.more_horiz),
-              tooltip: 'More Option'),
-        ],
-      ),
+      child: DefaultTabController(
+          length: 3,
+          child: TabBar(
+            indicatorColor: Colors.amberAccent,
+            tabs: const [Text('All'), Text('Lights'), Text('Living Room')],
+          )),
       padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
       margin: const EdgeInsets.symmetric(horizontal: 0.0, vertical: 20),
       color: const Color.fromARGB(255, 119, 119, 119),
     );
   }
 }
+
+// Text('All',
+//     style: TextStyle(
+//       fontSize: 21,
+//       color: Colors.white,
+//     )),
+// IconButton(
+//     onPressed: null,
+//     icon: Icon(Icons.more_horiz),
+//     tooltip: 'More Option'),
 
 //the gridbox container as a stateless widget
 class GridBox extends StatefulWidget {

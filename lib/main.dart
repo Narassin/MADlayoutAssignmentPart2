@@ -10,7 +10,7 @@ class IoTApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(title: 'Assignment 2A', home: MainPage());
+    return const MaterialApp(title: 'Assignment 2B', home: MainPage());
   }
 }
 
